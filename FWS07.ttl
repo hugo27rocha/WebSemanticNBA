@@ -1,0 +1,434 @@
+@prefix : <http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12> .
+
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#gameAwayTeam
+:gameAwayTeam rdf:type owl:ObjectProperty ;
+              rdfs:domain :NbaGame ;
+              rdfs:range :NbaTeam .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#gameHomeTeam
+:gameHomeTeam rdf:type owl:ObjectProperty ;
+              rdfs:domain :NbaGame ;
+              rdfs:range :NbaTeam .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playerNacionality
+:playerNacionality rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Player ;
+                   rdfs:range :Country .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playsGame
+:playsGame rdf:type owl:ObjectProperty ;
+           rdfs:domain :Player ;
+           rdfs:range :Game .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playsIn
+:playsIn rdf:type owl:ObjectProperty ;
+         rdfs:domain :Player ;
+         rdfs:range :Team .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamArena
+:teamArena rdf:type owl:ObjectProperty ;
+           rdfs:domain :Team ;
+           rdfs:range :Arena .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamAssistendCoachedBy
+:teamAssistendCoachedBy rdf:type owl:ObjectProperty ;
+                        rdfs:domain :NbaTeam ;
+                        rdfs:range :AssistantCoach .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamCity
+:teamCity rdf:type owl:ObjectProperty ;
+          rdfs:domain :Team ;
+          rdfs:range :City .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamCoachedBy
+:teamCoachedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :NbaTeam ;
+               rdfs:range :HeadCoach .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamPresident
+:teamPresident rdf:type owl:ObjectProperty ;
+               rdfs:domain :NbaTeam ;
+               rdfs:range :President .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#winsAward
+:winsAward rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#winsChampionship
+:winsChampionship rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :winsAward ;
+                  rdfs:range :Championship .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#winsCoachOfTheYear
+:winsCoachOfTheYear rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :winsAward ;
+                    rdfs:range :CoachOfTheYear .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#winsMvp
+:winsMvp rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :winsAward ;
+         rdfs:range :Mvp .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#winsRookieOfTheYear
+:winsRookieOfTheYear rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :winsAward ;
+                     rdfs:domain :NbaPlayer ;
+                     rdfs:range :RookieOfTheYear .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#arenaCapacity
+:arenaCapacity rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Arena ;
+               rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#gameDate
+:gameDate rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Game ;
+          rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#gamePtsAway
+:gamePtsAway rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Game ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#gamePtsHome
+:gamePtsHome rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Game ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playerHeight
+:playerHeight rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Player ;
+              rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playerJerseyNumber
+:playerJerseyNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Player ;
+                    rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playerName
+:playerName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Player ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playerPosition
+:playerPosition rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Player ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#playerWeight
+:playerWeight rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Player ;
+              rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamAbbreviation
+:teamAbbreviation rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Team ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamName
+:teamName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Team ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamNickname
+:teamNickname rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Team ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#teamYearFounded
+:teamYearFounded rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Team ;
+                 rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#AllStarGame
+:AllStarGame rdf:type owl:Class ;
+             rdfs:subClassOf :NbaGame .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#AllStarPlayer
+:AllStarPlayer rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :playsGame ;
+                                     owl:someValuesFrom :AllStarGame
+                                   ] ;
+               rdfs:subClassOf :NbaPlayer .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Arena
+:Arena rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#AssistantCoach
+:AssistantCoach rdf:type owl:Class ;
+                rdfs:subClassOf :NbaWorker .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Award
+:Award rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#AwardWinningCoach
+:AwardWinningCoach rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :winsCoachOfTheYear ;
+                                         owl:someValuesFrom :CoachOfTheYear
+                                       ] ;
+                   rdfs:subClassOf :HeadCoach .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#BasketBallPlayer
+:BasketBallPlayer rdf:type owl:Class ;
+                  rdfs:subClassOf :SportsPlayer .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Championship
+:Championship rdf:type owl:Class ;
+              rdfs:subClassOf :NbaAward .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#ChampionshipWinner
+:ChampionshipWinner rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :winsChampionship ;
+                                          owl:someValuesFrom :Championship
+                                        ] ;
+                    rdfs:subClassOf :NbaPlayer .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Location .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#CoachOfTheYear
+:CoachOfTheYear rdf:type owl:Class ;
+                rdfs:subClassOf :NbaAward .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Location .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Game
+:Game rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#HeadCoach
+:HeadCoach rdf:type owl:Class ;
+           rdfs:subClassOf :NbaWorker .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Location
+:Location rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Mvp
+:Mvp rdf:type owl:Class ;
+     rdfs:subClassOf :NbaAward .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#MvpWinner
+:MvpWinner rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :winsMvp ;
+                                 owl:someValuesFrom :Mvp
+                               ] ;
+           rdfs:subClassOf :NbaPlayer .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#NbaAward
+:NbaAward rdf:type owl:Class ;
+          rdfs:subClassOf :Award .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#NbaGame
+:NbaGame rdf:type owl:Class ;
+         rdfs:subClassOf :SportsGame .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#NbaPlayer
+:NbaPlayer rdf:type owl:Class ;
+           rdfs:subClassOf :BasketBallPlayer .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#NbaTeam
+:NbaTeam rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty :teamAssistendCoachedBy ;
+                               owl:someValuesFrom :AssistantCoach
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :teamCoachedBy ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :HeadCoach
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :teamPresident ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :President
+                             ] ;
+         rdfs:subClassOf :SportsTeam .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#NbaWorker
+:NbaWorker rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Player
+:Player rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :playsIn ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Team
+                            ] .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#PlayoffGame
+:PlayoffGame rdf:type owl:Class ;
+             rdfs:subClassOf :NbaGame .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#President
+:President rdf:type owl:Class ;
+           rdfs:subClassOf :NbaWorker .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#RegularSeasonGame
+:RegularSeasonGame rdf:type owl:Class ;
+                   rdfs:subClassOf :NbaGame .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#RookieOfTheYear
+:RookieOfTheYear rdf:type owl:Class ;
+                 rdfs:subClassOf :NbaAward .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#RookieWinner
+:RookieWinner rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :winsRookieOfTheYear ;
+                                    owl:someValuesFrom :RookieOfTheYear
+                                  ] ;
+              rdfs:subClassOf :NbaPlayer .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#SportsGame
+:SportsGame rdf:type owl:Class ;
+            rdfs:subClassOf :Game .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#SportsPlayer
+:SportsPlayer rdf:type owl:Class ;
+              rdfs:subClassOf :Player .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#SportsTeam
+:SportsTeam rdf:type owl:Class ;
+            rdfs:subClassOf :Team .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Team
+:Team rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#Los_Angeles_Lakers
+:Los_Angeles_Lakers rdf:type owl:NamedIndividual ,
+                             :NbaTeam .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1985_MichaelJordan
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1985_MichaelJordan> rdf:type owl:NamedIndividual ,
+                                                                                                           :NbaPlayer ;
+                                                                                                  :winsRookieOfTheYear <http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1985_RookieAward> .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1985_RookieAward
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1985_RookieAward> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1996_CoachofTheYear
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1996_CoachofTheYear> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1996_PhilJackson
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1996_PhilJackson> rdf:type owl:NamedIndividual ;
+                                                                                                :winsCoachOfTheYear <http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#1996_CoachofTheYear> .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_AllStarGame
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_AllStarGame> rdf:type owl:NamedIndividual ,
+                                                                                                         :AllStarGame .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_Championship
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_Championship> rdf:type owl:NamedIndividual ,
+                                                                                                          :Championship .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_LebronJames
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_LebronJames> rdf:type owl:NamedIndividual ,
+                                                                                                         :NbaPlayer ;
+                                                                                                :playsGame <http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_AllStarGame> ;
+                                                                                                :playsIn :Los_Angeles_Lakers ;
+                                                                                                :winsChampionship <http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_Championship> ;
+                                                                                                :winsMvp <http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_MVP> .
+
+
+###  http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_MVP
+<http://www.semanticweb.org/hugorocha/ontologies/2020/10/untitled-ontology-12#2020_MVP> rdf:type owl:NamedIndividual ,
+                                                                                                 :Mvp .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
